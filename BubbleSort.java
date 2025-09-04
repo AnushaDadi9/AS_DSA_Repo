@@ -11,7 +11,7 @@ step 3 -> .... -> repeate this step (0-n-3)
 */
 public class BubbleSort {
 	    public int[] sortArray(int[] nums) {
-	        int didswap =0;
+	       
 	       for(int i = nums.length-1;i>=1;i--){
 	        
 	        for(int j=0;j<=i-1;j++){
@@ -19,13 +19,26 @@ public class BubbleSort {
 	            int temp = nums[j];
 	            nums[j] = nums[j+1];
 	            nums[j+1] = temp;
-	            didswap = 1;
-	           }
-	           if(didswap==0){
-	            break;
 	           }
 	        }
 	       }
 	       return nums; 
 	    }
+
+
+	//Using Recursive method
+	public int[] bubble_sort(int[] arr, int n)
+	{
+		if(n==1)
+			return;
+		for(int j=0;j<=n-2;i++){
+			if( nums[j] > nums[j+1]){
+	            int temp = nums[j];
+	            nums[j] = nums[j+1];
+	            nums[j+1] = temp;
+		}
+	}
+		bubble_sort(arr,n-1);
+	}
 }
+
