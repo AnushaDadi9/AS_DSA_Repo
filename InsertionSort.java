@@ -24,4 +24,20 @@ public class InsertionSort {
 		}
 		return nums;
 	}
+
+	//Using Recursive method
+	//initially, i value we have to pass as 0 while calling this method and it will imcrease in recusion.
+	public void insertion_sort(int[] arr, int i, int n){
+		if(n==1) return;
+
+		int j=i;
+		while (j > 0 && nums[j - 1] > nums[j]) {
+				int temp = nums[j - 1];
+				nums[j - 1] = nums[j];
+				nums[j] = temp;
+				j--;
+			}
+		insertion_sort(arr, i+1,n);
+	}
 }
+
