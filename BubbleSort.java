@@ -27,7 +27,7 @@ public class BubbleSort {
 
 
 	//Using Recursive method
-	public int[] bubble_sort(int[] arr, int n)
+	public void bubble_sort(int[] arr, int n)
 	{
 		if(n==1)
 			return;
@@ -41,4 +41,5 @@ public class BubbleSort {
 		bubble_sort(arr,n-1);
 	}
 }
+
 
