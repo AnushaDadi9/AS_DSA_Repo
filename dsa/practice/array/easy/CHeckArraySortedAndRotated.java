@@ -8,7 +8,8 @@ if only need to check sorted or not then it will easy we can check each element 
 				So, used count variable, increased count value when the element is greater than next element.
 				if count <=1 then return true.
 				why count<=1, actually it should be 0 because that if condition should not satisfy, but here we are checking rotaion, if we rotate some elements in an array then (sorted array -> it will fail at that place),(non sorted can be sorted after rotaion)
-				*/
+ int next = nums[(i+1)%n];- this well compare last index and first index. if you reach last index it will help to compare with first index, so that you can check in rotation it will sort or not.				
+	*/
 public class CHeckArraySortedAndRotated {
 	    public boolean check(int[] nums) {
 	        int count =0;
